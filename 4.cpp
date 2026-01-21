@@ -52,71 +52,71 @@
 //   return 0;
 // }
 
-#include <bits/stdc++.h>
-using namespace std;
+// #include <bits/stdc++.h>
+// using namespace std;
 
-bool hasOddDigit(long long n) {
-    while (n > 0) {
-        int d = n % 10;
-        if (d % 2 == 1) return true;
-        n /= 10;
-    }
-    return false;
-}
+// bool hasOddDigit(long long n) {
+//     while (n > 0) {
+//         int d = n % 10;
+//         if (d % 2 == 1) return true;
+//         n /= 10;
+//     }
+//     return false;
+// }
 
-bool allDigitsEven(long long n) {
-    while (n > 0) {
-        int d = n % 10;
-        if (d % 2 == 1) return false;
-        n /= 10;
-    }
-    return true;
-}
+// bool allDigitsEven(long long n) {
+//     while (n > 0) {
+//         int d = n % 10;
+//         if (d % 2 == 1) return false;
+//         n /= 10;
+//     }
+//     return true;
+// }
 
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+// int main() {
+//     ios::sync_with_stdio(false);
+//     cin.tie(nullptr);
 
-    int T;
-    cin >> T;
-    while (T--) {
-        long long N;
-        cin >> N;
+//     int T;
+//     cin >> T;
+//     while (T--) {
+//         long long N;
+//         cin >> N;
 
-        // Case 1: already odd
-        if (N % 2 == 1) {
-            cout << 0 << '\n';
-            continue;
-        }
+//         // Case 1: already odd
+//         if (N % 2 == 1) {
+//             cout << 0 << '\n';
+//             continue;
+//         }
 
-        // Case 2: contains odd digit
-        if (hasOddDigit(N)) {
-            cout << 1 << '\n';
-            continue;
-        }
+//         // Case 2: contains odd digit
+//         if (hasOddDigit(N)) {
+//             cout << 1 << '\n';
+//             continue;
+//         }
 
-        // Case 3: all digits even
-        bool possible = false;
-        long long temp = N;
+//         // Case 3: all digits even
+//         bool possible = false;
+//         long long temp = N;
 
-        // try subtracting each digit once
-        while (temp > 0) {
-            int d = temp % 10;
-            if (d > 0) {
-                long long newN = N - d;
-                if (newN > 0 && hasOddDigit(newN)) {
-                    possible = true;
-                    break;
-                }
-            }
-            temp /= 10;
-        }
+//         // try subtracting each digit once
+//         while (temp > 0) {
+//             int d = temp % 10;
+//             if (d > 0) {
+//                 long long newN = N - d;
+//                 if (newN > 0 && hasOddDigit(newN)) {
+//                     possible = true;
+//                     break;
+//                 }
+//             }
+//             temp /= 10;
+//         }
 
-        if (possible)
-            cout << 2 << '\n';
-        else
-            cout << -1 << '\n';
-    }
+//         if (possible)
+//             cout << 2 << '\n';
+//         else
+//             cout << -1 << '\n';
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
