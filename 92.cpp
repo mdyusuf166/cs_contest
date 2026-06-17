@@ -1,31 +1,44 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 
+void r() {
+    int n;
+    long long k;
 
-void r(){
-  int m,n;
-  cin>> m>>n;
-  if(n <= m){
-    cout <<m-n <<'\n';
-  }
-  else{
-    if((n-m) % 2 == 0){
-      cout << 0 << '\n';
-    }else{
-      cout << 1 << '\n';
+    cin >> n >> k;
+
+    vector<int> a(n);
+
+    long long s = 0;
+
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
+        s += a[i];
     }
-  }
+
+    long long shortage_matches = 0;
+
+    for (int i = 0; i < n; i++) {
+        for (int j = i + 1; j < n; j++) {
+            if (s + a[i] + a[j] > 2 * k) {
+                shortage_matches++;
+            }
+        }
+    }
+
+    cout << shortage_matches << '\n';
 }
 
 int main() {
-   ios::sync_with_stdio(false);
-  cin.tie(nullptr);
-  int t;
-  cin >> t;
-  while(t--){
-    r();
-  }
-  return 0;
-  
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int t;
+    cin >> t;
+
+    while (t--) {
+        r();
+    }
+
+    return 0;
 }
