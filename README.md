@@ -1,6 +1,4 @@
-If you want a professional `README.md` for **cs_contest** and this is a **4-day running coding contest/project**, you can use:
 
-````markdown
 # 🏆 CS Contest
 
 A competitive programming project focused on solving **Computer Science and programming problems** through algorithmic thinking, problem-solving, and efficient coding.
