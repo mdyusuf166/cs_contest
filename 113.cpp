@@ -43,14 +43,12 @@ ll s = 0;
             }
         }
     }
-
-    return false;
+ return false;
 }
 
 
 int main() {
-
-    ios::sync_with_stdio(false);
+ ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
     int t;
@@ -78,7 +76,7 @@ int main() {
 
             cout << -1 << '\n';
 
-            continue;
+         continue;
         }
         ll mx = *max_element(a.begin(), a.end());
         ll lo = 1;
@@ -104,6 +102,5 @@ int main() {
 
         cout << ans << '\n';
     }
-
-    return 0;
+return 0;
 }
